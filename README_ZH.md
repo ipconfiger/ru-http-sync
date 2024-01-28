@@ -9,4 +9,6 @@
 
 ## 演示视频
 
+如果打不开Youtube 就看这里 [B站视频连接:【ru-http-sync 使用演示】](https://www.bilibili.com/video/BV1mV411Q7sR/?share_source=copy_web&vd_source=ed4c59b63c93c54db05c54ae7585495d)
+
 [![ru-http-sync](https://res.cloudinary.com/marcomontalbano/image/upload/v1706428615/video_to_markdown/images/youtube--QZbMyvME2nA-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/QZbMyvME2nA "ru-http-sync")
