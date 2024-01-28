@@ -77,7 +77,7 @@ pub async fn list_dir_request(
                 }else{
                     let file_name = item.file_name().to_os_string().into_string().unwrap();
                     let down_path = format!("{path}/{file_name}");
-                    println!("down path:{}", down_path);
+                    //println!("down path:{}", down_path);
                     html_buf.push(format!("<li><a href=\"{down_path}\" target=\"__blank\">{file_name}</></li>"));
                 }
             }
