@@ -15,8 +15,10 @@ async fn main() {
         .route("/", get(list_dir_request))
         .route("/", post(upload_file))
         .fallback_service(static_service);
+    let my_ip = get_ip().unwrap();
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:8000").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:9527").await.unwrap();
+    println!("Copy url: http://{my_ip}:9527");
     axum::serve(listener, app).await.unwrap();
 
 }
