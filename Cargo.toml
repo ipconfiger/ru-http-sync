@@ -13,3 +13,4 @@ tracing-subscriber = { version="0.3", features = ["env-filter"] }
 tower-http = { version = "0.5.1", features = ["fs", "trace"] }
 serde = { version = "1.0.195", features = ["derive"] }
 futures-util = "0.3.30"
+tera = "1.19"
