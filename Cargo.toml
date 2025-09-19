@@ -2,6 +2,15 @@
 name = "httpsync"
 version = "0.1.1"
 edition = "2021"
+authors = ["Alex <alex@example.com>"]
+description = "A modern LAN file sharing tool with drag-and-drop upload and responsive design"
+license = "MIT"
+repository = "https://github.com/yourusername/ru-http-sync"
+homepage = "https://github.com/yourusername/ru-http-sync"
+documentation = "https://docs.rs/httpsync"
+keywords = ["http", "server", "file-sharing", "lan", "upload", "download"]
+categories = ["web-programming::http-server", "command-line-utilities"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
