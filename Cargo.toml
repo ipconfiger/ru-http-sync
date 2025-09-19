@@ -8,7 +8,7 @@ license = "MIT"
 repository = "https://github.com/yourusername/ru-http-sync"
 homepage = "https://github.com/yourusername/ru-http-sync"
 documentation = "https://docs.rs/httpsync"
-keywords = ["http", "server", "file-sharing", "lan", "upload", "download"]
+keywords = ["http", "server", "file-sharing", "lan", "upload"]
 categories = ["web-programming::http-server", "command-line-utilities"]
 readme = "README.md"
 
