@@ -57,6 +57,7 @@ pub async fn upload_file(
     mut multipart: Multipart
 )-> Redirect {
     let mut current_dir = env::current_dir().unwrap();
+    //let mut current_dir = PathBuf::from("/root");
     let path = query.path.unwrap_or("".to_string());
     for dir in path.clone().split("/").collect::<Vec<&str>>(){
         current_dir.push(dir.to_string())
@@ -81,7 +82,7 @@ pub async fn upload_file(
 
 pub async fn list_dir_request(
     Query(query): Query<PathQuery>,
-    axum::extract::State(tera): axum::extract::State<Tera>
+    axum::extract::State(mut tera): axum::extract::State<Tera>
 ) -> Result<Html<String>, axum::response::Response> {
     let current_dir = env::current_dir().unwrap();
     println!("current: {current_dir:?}");
@@ -151,13 +152,17 @@ pub async fn list_dir_request(
     };
     
     let current_dir_display = if path.is_empty() { "/".to_string() } else { path.clone() };
-    
+
+    //let mut tera = Tera::default();
+    tera.add_raw_template("directory.html", include_str!("../templates/directory.html"))
+        .expect("Failed to add template");
     // 创建 Tera 上下文
     let mut context = Context::new();
     context.insert("current_dir", &current_dir_display);
     context.insert("current_path", &path);
     context.insert("parent_path", &parent_path);
     context.insert("items", &items);
+
     
     match tera.render("directory.html", &context) {
         Ok(html) => Ok(Html(html)),
